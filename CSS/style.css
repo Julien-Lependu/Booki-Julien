@@ -120,10 +120,12 @@
   @keyframes page {
     from {
       opacity: 1;
+      z-index: 10;
     }
 
     to {
       opacity: 0;
+      z-index: -1;
     }
   }
 
@@ -595,12 +597,15 @@
 
 
     #filtres ul {
-      gap: 50px;
-      display: unset;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 0;
     }
 
     #filtres li {
-      width: 160px;
+      padding: 13px;
+      font-size: 11px;
     }
 
     .align-horizon {
